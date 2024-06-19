@@ -1,15 +1,21 @@
 {
   "scripts": {
-    "deploy": "wrangler deploy --minify --env production",
+    "deploy": "wrangler deploy --minify --env prod",
     "dev": "wrangler dev --env dev",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "cf-typegen:dev": "wrangler types --env-interface CloudflareBindings --env dev",
+    "cf-typegen:prod": "wrangler types --env-interface CloudflareBindings --env prod",
+    "db:generate": "npx drizzle-kit generate",
+    "db:up": "drizzle-kit up:sqlite"
   },
   "dependencies": {
+    "common": "workspace:*",
+    "drizzle-orm": "^0.31.2",
     "hono": "^4.4.6",
-    "common": "workspace:*"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240614.0",
+    "drizzle-kit": "^0.22.7",
     "wrangler": "^3.57.2"
   }
 }
