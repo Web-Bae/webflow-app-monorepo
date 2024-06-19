@@ -25,55 +25,12 @@ template for creating webflow apps with CF Worker Hono API and Webflow designer 
 
 ### Create the monorepo
 
-`pnpm init`
-`git init` (if not already done)
-`echo -e "node_modules" > .gitignore`
-`npm pkg set type="module"`
-`touch pnpm-workspace.yaml` add the `packages/*` directory
+https://dev.to/vinomanick/create-a-monorepo-using-pnpm-workspace-1ebn
 
-### Initialize the common package
+### Create the Designer Extension
 
-`mkdir packages`
-`cd packages`
-`pnpm create vite common --template vanilla-ts`
-`cd ../`
-`pnpm install`
-`npm pkg set scripts.common="pnpm --filter common"`
-clear out main.ts. Can use this to export types common to client and server now.
-`cd packages/common`
-`rm -rf src/style.css src/counter.ts` deletes sample files
-`pnpm common add -D vite-plugin-dts` for auto-generating types
-`touch vite.config.ts`
+https://developers.webflow.com/designer/reference/webflow-cli
 
-```
-import { defineConfig } from 'vite'
-import { resolve } from 'path'
-import dts from 'vite-plugin-dts'
+### Create the CF Worker Hono JS Backend
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  build: { lib: { entry: resolve(__dirname, 'src/main.ts'), formats: ['es'] } },
-  resolve: { alias: { src: resolve('src/') } },
-  plugins: [dts()],
-})
-```
-
-Update `package.json` for common
-
-```
-{
- ...,
- "main": "./dist/common.js",
- "types": "./dist/main.d.ts",
-}
-```
-
-Run `pnpm run dev` to verify the output in dist folder
-
-### Initialize the client package
-
-In packages directory
-`pnpm create vite client --template svelte-ts`
-`cd ..`
-pnpm install
-npm pkg set scripts.client="pnpm --filter client"
+https://developers.cloudflare.com/pages/framework-guides/deploy-a-hono-site/

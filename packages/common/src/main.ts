@@ -3,6 +3,6 @@ export type ExampleType = {
 };
 
 export function exampleFunction(): ExampleType {
-  console.log("Hello from common second");
+  console.log("Hello from common");
   return { message: "hello world" };
 }
