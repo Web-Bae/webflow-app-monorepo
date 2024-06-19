@@ -1,0 +1,18 @@
+{
+  "name": "webflow-app-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "common": "pnpm --filter common",
+    "client": "pnpm --filter client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
