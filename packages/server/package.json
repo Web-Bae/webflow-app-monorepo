@@ -1,11 +1,8 @@
 {
   "scripts": {
-    "deploy": "wrangler deploy --minify --env prod",
-    "dev": "wrangler dev --env dev",
-    "cf-typegen:dev": "wrangler types --env-interface CloudflareBindings --env dev",
-    "cf-typegen:prod": "wrangler types --env-interface CloudflareBindings --env prod",
-    "db:generate": "npx drizzle-kit generate",
-    "db:up": "drizzle-kit up:sqlite"
+    "deploy": "wrangler deploy --minify",
+    "dev": "wrangler dev",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
     "common": "workspace:*",

@@ -3,20 +3,6 @@ name = "server"
 main = "src/index.ts"
 compatibility_date = "2024-06-14"
 
-[env.dev]
-d1_databases = [
-  { binding = "DB", database_name = "dev-placeholder-bae", database_id = "8f0b5081-691b-4bf7-9498-4f6072846a48", migrations_dir = "drizzle" }
-]
-
-ai = { binding = "AI" }
-
-[env.prod]
-d1_databases = [
-  { binding = "DB", database_name = "prod-placeholder-bae", database_id = "4ba7e101-a3f1-4c25-9f33-577fc0551097", migrations_dir = "migrations/prod"}
-]
-
-ai = { binding = "AI" }
-
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure
 # rather than the end user may result in better performance.
