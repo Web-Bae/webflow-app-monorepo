@@ -13,7 +13,7 @@
   async function pingServer() {
     console.log("Pinging server");
     try {
-      const url = "http://localhost:8787/hello";
+      const url = "http://localhost:8787/example";
       const response = await fetch(url);
       const data = await response.json();
       webflow.notify({
