@@ -5,14 +5,13 @@
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.2.2",
     "common": "workspace:*",
-    "drizzle-orm": "^0.31.2",
-    "hono": "^4.4.6",
+    "hono": "^4.4.9",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240614.0",
-    "drizzle-kit": "^0.22.7",
     "wrangler": "^3.57.2"
   }
 }
