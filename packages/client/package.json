@@ -10,7 +10,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
-    "common": "workspace:*"
+    "common": "workspace:*",
+    "hono": "^4.4.9"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
