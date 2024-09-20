@@ -30,7 +30,7 @@
     });
   }
 
-  // Example to call our server (The cloudflare worker)
+  // Example call to the server
   async function pingExampleRouteOne() {
     console.log(`Pinging example route one`);
     try {

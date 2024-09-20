@@ -1,6 +1,6 @@
 {
   "name": "template-designer-extension",
-  "size": "compact",
+  "size": "large",
   "publicDir": "dist",
   "apiVersion": 2
 }
