@@ -2,5 +2,5 @@
   "name": "template-designer-extension",
   "size": "large",
   "publicDir": "dist",
-  "apiVersion": 2
+  "apiVersion": "2"
 }
