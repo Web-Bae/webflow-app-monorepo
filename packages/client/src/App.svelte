@@ -5,6 +5,7 @@
     type ExampleTwoRoute,
   } from "../../server/src/index";
   import { hc } from "hono/client";
+  import Counter from "./lib/Counter.svelte";
 
   // Put your server address here
   const localServerAddress = `https://ai-alt-96.localcan.dev`;
@@ -87,6 +88,7 @@
     <button on:click={notify}> Send notification </button>
     <button on:click={pingExampleRouteOne}> Ping Example Route One </button>
     <button on:click={pingExampleTwoRoute}> Ping Example Route Two </button>
+    <Counter />
   </div>
 </main>
 
