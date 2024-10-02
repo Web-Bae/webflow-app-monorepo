@@ -8,7 +8,7 @@
   import Counter from "./lib/Counter.svelte";
 
   // Put your server address here
-  const localServerAddress = `https://ai-alt-96.localcan.dev`;
+  const localServerAddress = `https://ai-alt-51.localcan.dev`;
 
   /**
    * Initialize the typesafe client
